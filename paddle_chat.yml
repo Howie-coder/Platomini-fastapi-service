@@ -1,7 +1,7 @@
 conf:
- model_name_or_path:plato-mini
- min_dec_len:10 #预测生成最小长度
- max_dec_len:50 #预测生成的最大长度
- num_return_sequences:10
- decode_strategy:sampling
- top_k:5
+ model_name_or_path: plato-mini
+ min_dec_len: 5 #预测生成最小长度
+ max_dec_len: 50 #预测生成的最大长度
+ num_return_sequences: 10
+ decode_strategy: sampling
+ top_k: 10 

@@ -26,5 +26,5 @@ if __name__ == '__main__':
     uvicore.run(
         app=app,
         host="127.0.0.1",
-        port=13621
+        port=9001
     )
