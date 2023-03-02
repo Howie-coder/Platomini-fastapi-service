@@ -7,8 +7,9 @@ import os
 logger = logging.getLogger(__name__)
 
 # 载入模型配置
-yaml_path=os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))),"paddle_chat.yml")
+yaml_path=os.path.join(os.path.dirname(os.path.abspath(__file__)),"paddle_chat.yml")
 print(yaml_path)
+
 try:
     # 打开文件
     with open(yaml_path,"r",encoding="utf-8") as f:
@@ -17,7 +18,7 @@ except:
     raise Exception("闲聊模型配置文件损坏")
 logger.info('模型配置已加载')
 print(conf)
-
+exit()
 # 初始化分词器和模型
 tokenizer = UnifiedTransformerTokenizer.from_pretrained('plato-mini')
 model = UnifiedTransformerLMHeadModel.from_pretrained('plato-mini')
