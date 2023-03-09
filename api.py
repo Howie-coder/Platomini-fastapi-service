@@ -14,7 +14,7 @@ class MessageOutput(BaseModel):
 class ChatAgentAPI():
     def __init__(self,dialog_predict_func) -> None:
         self.dialog_predict_func = dialog_predict_func
-    def run(self,port=13621) -> str:
+    def run(self,port=9001) -> str:
         # FastAPI接口定义
         app = FastAPI()          
         @app.get('/')
