@@ -1,1 +1,4 @@
 paddlenlp
+fastapi
+uvicorn
+termcolor
