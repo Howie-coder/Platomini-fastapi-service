@@ -7,7 +7,7 @@ services:
       context: .
       dockerfile: ./Dockerfile
     ports:
-      - 9001:9001
+      - 9002:9001
     # privileged: true
     # volumes:
       # - $PWD:/paddle
