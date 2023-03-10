@@ -2,13 +2,7 @@ version: '3.4'
 
 services:
   platominifastapiservice:
-    image: plato:1.0
-    build:
-      context: .
-      dockerfile: ./Dockerfile
+    image: plato:2.0
     ports:
-      - 9003:9000
+      - 9006:9000
     privileged: true
-    # volumes:
-      # - $PWD:/paddle
-      # - $PWD.paddlenlp:/home/jovyan/.paddlenlp
