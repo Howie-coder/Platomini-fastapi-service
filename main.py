@@ -11,7 +11,6 @@ class MessageInput(BaseModel):
 class MessageOutput(BaseModel):
     response: str
 
-
 app = FastAPI()
 
 @app.get('/')
@@ -25,6 +24,6 @@ async def respond_messages(input: MessageInput) -> MessageOutput:
 if __name__ == '__main__':
     uvicore.run(
         app=app,
-        host="127.0.0.1",
-        port=9001
+        host="0.0.0.0",
+        port=9000
     )
