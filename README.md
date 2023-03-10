@@ -10,4 +10,5 @@ docker build -t plato:1.0 .
 docker-compose up -d
 ```
 3.暴露服务器或或主机的9006端口（云服务器设置安全组，个人主机设置防火墙准入规则）
+
 4.通过浏览器 IP[替换为自己服务器的IP]:9006/docs 查看api使用规则
