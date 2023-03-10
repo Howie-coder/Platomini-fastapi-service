@@ -2,7 +2,7 @@ version: '3.4'
 
 services:
   platominifastapiservice:
-    image: plato:2.0
+    image: plato:1.0
     ports:
       - 9006:9000
     privileged: true
