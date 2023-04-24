@@ -14,12 +14,12 @@ class MessageOutput(BaseModel):
 class ChatAgentAPI():
     def __init__(self,dialog_predict_func) -> None:
         self.dialog_predict_func = dialog_predict_func
-    def run(self,port=9001) -> str:
+    def run(self,port) -> str:
         # FastAPI接口定义
         app = FastAPI()          
         @app.get('/')
         async def index() -> str:
-            return 'OK' 
+            return 'plato service running...' 
         @app.post('/messages')
         async def respond_messages(input: MessageInput) -> MessageOutput:
             return MessageOutput(response=self.dialog_predict_func(input.history))
@@ -27,7 +27,7 @@ class ChatAgentAPI():
 
         uvicorn.run(
         app=app,
-        host="127.0.0.1",
+        host="0.0.0.0",
         port=port,
         )
     

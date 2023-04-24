@@ -5,4 +5,4 @@ import api
 # 再调用run方法即可
 if __name__ == "__main__":
     agent = api.ChatAgentAPI(dialog_predict_func=dialog_predict)
-    agent.run()
+    agent.run(port=9000)
